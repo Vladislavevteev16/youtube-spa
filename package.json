@@ -40,5 +40,6 @@
     "typescript-eslint": "^8.57.0",
     "vite": "^8.0.1"
   },
-  "homepage": "https://vladislavevtee16.github.io/youtube-spa"
+  "name": "youtube-spa",
+  "homepage": "https://vladislavevteev16.github.io/youtube-spa"
 }
