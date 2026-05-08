@@ -1,0 +1,36 @@
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0;
+  display: inline-flex;
+  transition: 0.1s ease;
+}
+
+.toggle svg {
+  width: 20px;
+  height: 20px;
+  filter: var(--svg-filter);
+  animation: move 0.5s ease;
+}
+
+.toggle:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toggle:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateY(11px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

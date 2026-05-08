@@ -1,0 +1,105 @@
+:root {
+  --bg-primary: #f9f9f9;
+  --bg-header: linear-gradient(135deg, #ffffff 0%, #f8f9fc 100%);
+  --bg-header-boxShadow: 0 10px 30px -10px rgba(0, 0, 0, 0.089);
+  --bg-hover-card: #d4d6d876;
+  --bg-hover-language: #d4d6d876;
+  --bg-recentRequest: #f9f9f9;
+  --bg-recentRequest-hover: #d4d6d876;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-disabled: #94a3b8;
+  --text-inverse: #0f172a;
+  --text-inverse-recentRequest: #0f172ac0;
+
+  --svg-filter: brightness(0) invert(0);
+
+  --text-link: #3b82f6;
+  --text-success: #10b981;
+  --text-warning: #f59e0b;
+  --text-error: #ef4444;
+
+  --button-hover-bg: transparent;
+  --button-hover-border: #3b82f6;
+  --button-hover-text: #3b82f6;
+}
+
+html,
+body {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--bg-primary);
+
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #141414;
+  --bg-header: linear-gradient(135deg, #141414 0%, #141414 100%);
+  --bg-header-boxShadow: 0 10px 30px -10px rgba(43, 187, 219, 0.111);
+  --bg-recentRequest: #1d1f24;
+  --bg-recentRequest-hover: #27292d76;
+  --text-inverse-recentRequest: #ffffffa8;
+
+  --bg-hover-card: #0e1c2e76;
+  --bg-hover-language: #112e4c76;
+
+  --text-primary: #f3f6f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --text-disabled: #64748b;
+  --text-inverse: #0f172a;
+  --text-inverse: #ffffff;
+
+  --svg-filter: brightness(0) invert(1);
+
+  --text-link: #60a5fa;
+  --text-success: #34d399;
+  --text-warning: #fbbf24;
+  --text-error: #f87171;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  font-family: "Inter", sans-serif;
+  user-select: none;
+  cursor: default;
+}
+.button {
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}

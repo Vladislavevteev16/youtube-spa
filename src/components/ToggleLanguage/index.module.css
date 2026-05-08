@@ -1,0 +1,36 @@
+.languageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.toggleLanguage {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0;
+  display: inline-flex;
+  transition: 0.1s ease;
+  margin-right: 10px;
+}
+
+.toggleLanguage.isMobile {
+  margin: 0;
+}
+
+.toggleLanguage svg {
+  width: 20px;
+  height: 20px;
+  filter: var(--svg-filter);
+  animation: move 0.5s ease;
+  transition: 0.2s ease;
+}
+
+.toggleLanguage:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.2s ease;
+}
+
+.toggleLanguage:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

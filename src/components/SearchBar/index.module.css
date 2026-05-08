@@ -1,0 +1,164 @@
+.searchBarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.searchBarContainer.hasVideos {
+  align-self: self-start;
+  animation: fadeInMove 0.5s ease;
+  margin-bottom: 0px;
+}
+
+.searchBarContainer h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-inverse);
+  margin: 30px 0 20px 0;
+}
+
+.searchBarContainer.hasVideos h1 {
+  align-self: flex-start;
+  font-size: 1.5rem;
+}
+
+.customStyle {
+  width: 691px;
+  position: relative;
+}
+
+.customStyle :global(.ant-input-affix-wrapper) {
+  font-size: 16px !important;
+}
+
+.customStyle.hasVideos {
+  width: 500px;
+}
+
+.addToFavoritesBtn {
+  font-size: 20px;
+  color: #1677ff;
+}
+
+.addToFavoritesBtn :hover {
+  fill: #ff4d4f;
+  stroke: #ff4d4f;
+}
+
+.customStyle :global(.ant-btn) {
+  background: linear-gradient(
+    135deg,
+    #000000 20%,
+    var(--button-hover-border) 100%
+  ) !important;
+  border: none !important;
+  border-radius: 0 60px 60px 0 !important;
+  height: 100% !important;
+  padding: 10px 28px !important;
+  font-weight: 400 !important;
+  transition: all 0.3s ease !important;
+  font-family: "Inter", sans-serif;
+  min-width: 101px;
+  max-height: 40px;
+}
+
+.customStyle :global(.ant-btn:hover) {
+  filter: brightness(1.05) !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInMove {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 429px) and (max-width: 600px) {
+  .customStyle {
+    width: 375px;
+    height: 30px;
+    position: relative;
+  }
+
+  .customStyle.hasVideos {
+    width: 375px;
+  }
+
+  .searchBarContainer h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-inverse);
+    margin: 30px 0 20px 0;
+  }
+
+  .customStyle :global(.ant-input-affix-wrapper) {
+    font-size: 14px !important;
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 429px) {
+  .customStyle {
+    width: 340px;
+    height: 30px;
+    position: relative;
+  }
+
+  .customStyle.hasVideos {
+    width: 340px;
+  }
+
+  .searchBarContainer h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--text-inverse);
+    margin: 30px 0 20px 0;
+  }
+
+  .customStyle :global(.ant-input-affix-wrapper) {
+    font-size: 14px !important;
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media (max-width: 376px) {
+  .customStyle {
+    width: 316px;
+    height: 28px;
+    position: relative;
+  }
+
+  .customStyle.hasVideos {
+    width: 316px;
+  }
+
+  .searchBarContainer h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-inverse);
+    margin: 30px 0 20px 0;
+  }
+
+  .customStyle :global(.ant-input-affix-wrapper) {
+    font-size: 14px !important;
+    padding: 0 10px 0 10px;
+  }
+}

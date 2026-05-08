@@ -1,0 +1,114 @@
+.languageMenuContainer {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: -128%;
+  transform: translateX(-50%);
+  background-color: var(--bg-header, #ffffff);
+  border-radius: 12px;
+  border: 1.5px solid var(--button-hover-border);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  animation: fadeInDown 0.2s ease;
+  min-width: 100px;
+}
+
+@media (max-width: 450px) {
+  .languageMenuContainer {
+    position: absolute;
+    top: calc(100% + 20px);
+    right: -669%;
+    transform: translateX(-50%);
+    background-color: var(--bg-header, #ffffff);
+    border-radius: 12px;
+    border: 1.5px solid var(--button-hover-border);
+    box-shadow:
+      0 6px 16px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    animation: fadeInDown 0.2s ease;
+    min-width: 100px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.languageMenuContainer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.languageMenuContainer li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--text-primary, #333333);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  border-radius: 11px;
+}
+
+.languageText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.languageCode {
+  font-size: 7px;
+  font-weight: 500;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.languageName {
+  font-size: 11px;
+}
+
+.iconWrapper {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.languageMenuContainer li.active {
+  background-color: rgba(71, 102, 117, 0.1);
+  color: #476675;
+  font-weight: 500;
+}
+
+.languageMenuContainer li:hover {
+  background-color: var(--bg-hover-language);
+}
+
+.languageMenuContainer li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}

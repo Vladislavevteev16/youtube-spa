@@ -1,0 +1,99 @@
+{
+  "ru": {
+    "header": {
+      "search": "Поиск",
+      "favorites": "Избранное",
+      "logout": "Выйти"
+    },
+    "searchBar": {
+      "searchVideo": "Поиск видео",
+      "searchPlaceholder": "Найти видео",
+      "buttonText": "Найти",
+      "videoOnDemandText": "Видео по запросу"
+    },
+    "modal": {
+      "titleModal": {
+        "save": "Сохранить запрос",
+        "edit": "Редактировать"
+      },
+      "titlePlaceholder": "Укажите название",
+      "request": "Запрос",
+      "title": "Название",
+      "sortBy": "Сортировать по",
+      "maxQty": "Максимальное количество",
+      "defaultSort": "По умолчанию",
+      "byDate": "По дате",
+      "byRating": "По рейтингу",
+      "byName": "По названию",
+      "byNumberOfViews": "Самые популярные",
+      "save": "Сохранить",
+      "cancel": "Не сохранять",
+      "requierdField": "Поле должно быть заполнено",
+      "minLength": "Минимум 3 символа"
+    },
+    "savedQuery": {
+      "favorite": "Избранное",
+      "emptyText": "Список избранного пуст"
+    },
+    "common": {
+      "yes": "Да",
+      "no": "Нет",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "delete": "Удалить",
+      "edit": "Редактировать",
+      "loading": "Загрузка...",
+      "error": "Ошибка",
+      "success": "Успешно"
+    }
+  },
+  "en": {
+    "header": {
+      "search": "Search",
+      "favorites": "Favorites",
+      "logout": "Logout"
+    },
+    "searchBar": {
+      "searchVideo": "Video search",
+      "searchPlaceholder": "Find a video",
+      "buttonText": "Search",
+      "videoOnDemandText": "Video on demand"
+    },
+    "modal": {
+      "titleModal": {
+        "save": "Save request",
+        "edit": "Edit"
+      },
+      "titlePlaceholder": "Input the name",
+      "request": "Request",
+      "title": "Name",
+      "sortBy": "Sort by",
+      "maxQty": "Maximum quantity",
+      "defaultSort": "Relevanse",
+      "byDate": "Date",
+      "byRating": "Rating",
+      "byName": "Name",
+      "byNumberOfViews": "Most popular",
+      "save": "Save",
+      "cancel": "Cancel",
+      "requierdField": "The field must be filled in",
+      "minLength": "Minimum 3 characters"
+    },
+    "savedQuery": {
+      "favorite": "Favorites",
+      "emptyText": "The favorites list is empty"
+    }
+  },
+
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}

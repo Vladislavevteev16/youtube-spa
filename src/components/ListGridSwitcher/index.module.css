@@ -1,0 +1,38 @@
+.listGridSwitcherContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 0;
+}
+
+.listGridSwitcherContainer p {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.controlButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50px;
+}
+
+.grid svg {
+  filter: var(--svg-filter);
+  cursor: pointer;
+}
+
+.list svg {
+  filter: var(--svg-filter);
+  cursor: pointer;
+}
+
+.list.listActive svg,
+.grid.gridActive svg {
+  filter: none !important;
+  fill: #3167be !important;
+}

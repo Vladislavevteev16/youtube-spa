@@ -1,0 +1,59 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 93vh;
+  gap: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pageWrapper > :last-child {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.pageWrapper.mainPage {
+  justify-content: center;
+}
+
+.pageWrapper.mainPage > :last-child {
+  margin-top: -141px;
+  margin-bottom: 15px;
+}
+
+.upButton {
+  position: fixed;
+  bottom: 30px;
+  color: var(--text-primary);
+  right: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.upButton:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.upButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .upButton {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    font-size: 33px;
+  }
+}

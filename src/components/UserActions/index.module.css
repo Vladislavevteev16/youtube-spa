@@ -1,0 +1,31 @@
+.buttonLogout {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "SF Pro Display", "Inter", sans-serif;
+  font-weight: 300;
+  transition: all 0.2s ease;
+  padding: 6px 17px;
+  border-radius: 40px;
+  letter-spacing: 0.3px;
+  display: flex;
+  gap: 5px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.buttonLogout:hover {
+  border: 1px solid var(--button-hover-border);
+  background: transparent;
+}
+
+.buttonLogout.isMobile {
+  padding: 0;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}

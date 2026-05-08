@@ -1,0 +1,42 @@
+.burgerContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.burgerContainer > :first-child {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  filter: var(--svg-filter);
+}
+
+.burgerContainer > :first-child:hover {
+  transform: scale(1.05);
+}
+
+.dropDownContainer {
+  position: absolute;
+  top: 45px;
+  right: -18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  padding: 16px;
+  min-width: 116px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

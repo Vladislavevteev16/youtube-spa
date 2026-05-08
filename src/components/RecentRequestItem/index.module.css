@@ -1,0 +1,30 @@
+.recentRequestItemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.recentRequestItemContainer svg {
+  font-size: 1rem;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+.recentRequestItemContainer div p {
+  font-size: 14px;
+}
+
+.closeButton svg:hover {
+  color: #3167be;
+}
