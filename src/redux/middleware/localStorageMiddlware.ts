@@ -50,8 +50,13 @@ const persistStateToLocalStorage = <K extends keyof RootState>(
 
 export const loadFromLocalStorage = (storageKey: keyof RootState) => {
   const saved = localStorage.getItem(storageKey);
-
-  return saved ? JSON.parse(saved) : null;
+  if (saved) {
+    try {
+      return JSON.parse(saved);
+    } catch (e) {
+      return saved;
+    }
+  }
 };
 
 export const localStorageMiddleware: Middleware =
