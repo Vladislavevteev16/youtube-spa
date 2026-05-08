@@ -18,14 +18,6 @@ const pairsOfValuesToSave: PairsOfValuesToSave = {
   viewMode: PairsOfValues.VIEW_MODE,
 };
 
-export const clearLocalStorageItem = () => {
-  Object.keys(pairsOfValuesToSave).map((key) => {
-    if (localStorage.getItem(key)) {
-      localStorage.removeItem(key);
-    }
-  });
-};
-
 const persistStateToLocalStorage = <K extends keyof RootState>(
   state: RootState,
   stateProperty: K,

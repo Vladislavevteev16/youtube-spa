@@ -36,8 +36,8 @@ export const LoginForm = () => {
 
   const formConfig: FormConfigType = {
     defaultValues: {
-      email: "",
-      password: "",
+      email: "vbabangida@bk.ru",
+      password: "VladEvteev$1996",
     },
     mode: "onChange",
   };

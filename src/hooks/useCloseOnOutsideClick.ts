@@ -1,4 +1,5 @@
 import { useEffect, type RefObject } from "react";
+
 import { useAppDispatch } from "../redux/store/hooks";
 
 export const useCloseOnOutsideClick = (

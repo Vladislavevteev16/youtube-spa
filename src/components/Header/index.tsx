@@ -23,6 +23,8 @@ import { SearchOutlined, StarOutlined } from "@ant-design/icons";
 
 import { UserActions } from "../UserActions";
 
+import logo from "../../assets/youtube-icon.svg";
+
 type Items = {
   id: number;
   title: string;
@@ -31,7 +33,6 @@ type Items = {
 };
 
 import s from "./index.module.css";
-import { clearLocalStorageItem } from "../../redux/middleware/localStorageMiddlware";
 
 type ReferensListType = Items[];
 
@@ -48,8 +49,7 @@ export const Header = () => {
 
   const handleLogout = () => {
     dispatch(userLogout());
-    localStorage.removeItem("viewMode");
-    clearLocalStorageItem();
+    localStorage.clear();
   };
 
   const handleOutMainPage = () => {
@@ -86,7 +86,7 @@ export const Header = () => {
       <nav>
         <div>
           <NavLink onClick={handleOutMainPage} className={s.logoLink} to="/">
-            <img className={s.logo} src="youtube-icon.svg" alt="LOGO" />
+            <img className={s.logo} src={logo} alt="LOGO" />
           </NavLink>
 
           <ul className={s.headerList}>

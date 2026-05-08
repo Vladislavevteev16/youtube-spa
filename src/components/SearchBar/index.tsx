@@ -43,7 +43,7 @@ import { LanguageOptions } from "../../constants/enums";
 
 import s from "./index.module.css";
 
-const TIMER_DELAY = 250;
+const DELAY = 250;
 
 export const SearchBar = () => {
   const dispatch = useAppDispatch();
@@ -121,7 +121,7 @@ export const SearchBar = () => {
 
     debounceTimerRef.current = setTimeout(() => {
       dispatch(saveCurrentQueryName(value.trim()));
-    }, TIMER_DELAY);
+    }, DELAY);
   };
 
   return (

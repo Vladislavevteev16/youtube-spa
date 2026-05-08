@@ -42,7 +42,7 @@ export const SavedQueriesItem: FC<Pick<Query, "id" | "query">> = memo(
       ).unwrap();
       dispatch(saveCurrentQueryName(savedQueryParams?.query || ""));
       dispatch(setSearchResultViewMode(savedQueryParams?.query || ""));
-      navigate("/");
+      navigate("/", { replace: true });
     };
 
     return (

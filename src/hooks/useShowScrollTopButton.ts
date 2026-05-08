@@ -1,5 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 
+const MIN_VALUE_SHOW_BTN = 700;
+const DELAY = 500;
+
 export const useShowScrollTopButton = (
   ref: React.RefObject<HTMLElement | null>,
   hasVideos: boolean,
@@ -22,12 +25,12 @@ export const useShowScrollTopButton = (
       isThrottledRef.current = true;
 
       const scrollPosition = Number(ref.current?.scrollTop);
-      setIsShow(scrollPosition > 700);
+      setIsShow(scrollPosition > MIN_VALUE_SHOW_BTN);
       console.log(scrollPosition);
 
       setTimeout(() => {
         isThrottledRef.current = false;
-      }, 500);
+      }, DELAY);
     };
 
     const element = ref.current;
