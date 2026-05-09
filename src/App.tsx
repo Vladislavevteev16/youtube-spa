@@ -11,13 +11,13 @@ import { ModalPortal } from "./components/ModalPortal";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { PublicRoute } from "./components/PublicRoute";
 
-import { useScrollToTopFromTouchEnd } from "./hooks/useScrollToTopFromTouchEnd";
+import { useKeyboardFix } from "./hooks/useKeyboardFix";
 
 import "normalize.css";
 import "./App.css";
 
 function App() {
-  useScrollToTopFromTouchEnd();
+  useKeyboardFix();
   return (
     <>
       <div className="modal" id="modal"></div>
