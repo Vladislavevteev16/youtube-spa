@@ -26,7 +26,6 @@ export const useShowScrollTopButton = (
 
       const scrollPosition = Number(ref.current?.scrollTop);
       setIsShow(scrollPosition > MIN_VALUE_SHOW_BTN);
-      console.log(scrollPosition);
 
       setTimeout(() => {
         isThrottledRef.current = false;

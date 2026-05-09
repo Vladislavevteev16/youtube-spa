@@ -21,6 +21,7 @@ export const useKeyboardFix = () => {
     const handleBlur = (e: FocusEvent) => {
       const target = e.target;
       if (target !== null && "tagName" in target) {
+        console.log(target.tagName);
         if (
           target?.tagName === "INPUT" ||
           target?.tagName === "TEXTAREA" ||

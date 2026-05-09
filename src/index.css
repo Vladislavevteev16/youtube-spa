@@ -25,34 +25,61 @@
   --button-hover-text: #3b82f6;
 }
 
-html,
-body {
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  background-color: var(--bg-primary);
 
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  height: 0;
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  overscroll-behavior: none;
+  background-color: var(--bg-primary);
 }
 
 #root {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  min-height: 100svh;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   background-color: var(--bg-primary);
+}
+
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+html,
+body,
+#root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 [data-theme="dark"] {
@@ -70,7 +97,6 @@ body::-webkit-scrollbar {
   --text-secondary: #cbd5e1;
   --text-tertiary: #94a3b8;
   --text-disabled: #64748b;
-  --text-inverse: #0f172a;
   --text-inverse: #ffffff;
 
   --svg-filter: brightness(0) invert(1);
@@ -93,19 +119,15 @@ p {
   user-select: none;
   cursor: default;
 }
+
 .button {
   font-family: "Inter", sans-serif;
-}
-
-* {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
 }
 
 input,
 textarea,
 select {
   font-size: 16px !important;
+  -webkit-user-select: text;
+  user-select: text;
 }
