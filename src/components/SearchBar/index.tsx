@@ -69,7 +69,12 @@ export const SearchBar = () => {
 
   useEffect(() => {
     setSearchText(queryFromSavedQueries);
-  }, [queryFromSavedQueries, setSearchText]);
+    return () => {
+      if (!hasVideos) {
+        localStorage.removeItem("savedQuery");
+      }
+    };
+  }, [queryFromSavedQueries, setSearchText, hasVideos]);
 
   useCloseOnOutsideClick(inputWrapperRef, closeRequestList);
 
