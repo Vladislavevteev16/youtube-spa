@@ -54,6 +54,7 @@ export const loadFromLocalStorage = (storageKey: keyof RootState) => {
     try {
       return JSON.parse(saved);
     } catch (e) {
+      console.log(e);
       return saved;
     }
   }
