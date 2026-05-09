@@ -11,10 +11,13 @@ import { ModalPortal } from "./components/ModalPortal";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { PublicRoute } from "./components/PublicRoute";
 
+import { useScrollToTopFromTouchEnd } from "./hooks/useScrollToTopFromTouchEnd";
+
 import "normalize.css";
 import "./App.css";
 
 function App() {
+  useScrollToTopFromTouchEnd();
   return (
     <>
       <div className="modal" id="modal"></div>
