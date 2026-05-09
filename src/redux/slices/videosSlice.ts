@@ -27,8 +27,6 @@ export const searchVideos = createAsyncThunk<VideoModel[], SearchParams>(
     try {
       const response = await youtubeApi.searchVideos({ q, maxResults, order });
 
-      await new Promise((res) => setTimeout(() => res(1), 3000));
-
       return convertMapToModel(response.data.items);
     } catch (e) {
       if (isAxiosError(e)) {
