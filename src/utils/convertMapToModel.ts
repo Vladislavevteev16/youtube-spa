@@ -10,6 +10,7 @@ export type VideoModel = {
   description: string;
   publishedAt: string;
   thumbnails?: Thumbnail;
+  viewCount: string;
 };
 
 export const convertMapToModel = (data: SearchResult[]): VideoModel[] => {
@@ -21,5 +22,6 @@ export const convertMapToModel = (data: SearchResult[]): VideoModel[] => {
     description: item.snippet.description,
     publishedAt: formatRelativeTime(item.snippet.publishedAt),
     thumbnails: item.snippet.thumbnails.medium,
+    viewCount: item.viewCount,
   }));
 };

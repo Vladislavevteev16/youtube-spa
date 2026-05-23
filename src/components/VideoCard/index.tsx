@@ -43,7 +43,9 @@ export const VideoCard: FC<VideoCardProps> = memo(({ video }) => {
         <div className={s.videoTitleContainer}>
           <h3>{video.title}</h3>
           <p className={s.videoDescription}>{video.channelTitle}</p>
-          <p className={s.videoDescription}>{video.publishedAt}</p>
+          <p className={s.videoMetadata}>
+            {video.publishedAt} • {video.viewCount} тыс. просмотров
+          </p>
         </div>
       </div>
     </div>

@@ -34,6 +34,7 @@ export type SearchResult = {
     channelTitle: string;
     liveBroadcastContent: string;
   };
+  viewCount: string;
 };
 
 export type SearchListResponse = {
@@ -60,11 +61,17 @@ export const youtubeClient = axios.create({
   },
 });
 
-
-
 export const youtubeApi = {
   searchVideos: (
     params: SearchParams,
   ): Promise<AxiosResponse<SearchListResponse>> =>
     youtubeClient.get<SearchListResponse>("/search", { params }),
+
+  getVideosById: (videoIds: string[]) =>
+    youtubeClient.get("/videos", {
+      params: {
+        id: videoIds.join(","),
+        part: "statistics",
+      },
+    }),
 };

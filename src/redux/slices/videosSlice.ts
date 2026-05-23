@@ -27,7 +27,20 @@ export const searchVideos = createAsyncThunk<VideoModel[], SearchParams>(
     try {
       const response = await youtubeApi.searchVideos({ q, maxResults, order });
 
-      return convertMapToModel(response.data.items);
+      const videosIds = response.data.items
+        .map((item) => item.id.videoId)
+        .filter(Boolean);
+
+      const getStatistics = await youtubeApi.getVideosById(videosIds);
+
+      const mergeVideosWithStatistics = response.data.items.map(
+        (videos, index) => ({
+          ...videos,
+          viewCount: getStatistics.data.items[index]["statistics"].viewCount,
+        }),
+      );
+
+      return convertMapToModel(mergeVideosWithStatistics);
     } catch (e) {
       if (isAxiosError(e)) {
         return rejectWithValue(e.response?.data?.message);
