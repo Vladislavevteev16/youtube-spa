@@ -36,8 +36,8 @@ export const LoginForm = () => {
 
   const formConfig: FormConfigType = {
     defaultValues: {
-      email: "",
-      password: "",
+      email: "demo@example.com",
+      password: "password123",
     },
     mode: "onChange",
   };
@@ -85,7 +85,8 @@ export const LoginForm = () => {
   }, [isError, api, errorMessage]);
 
   const handleMySubmit = async (credentials: CredentialsType) => {
-    await dispatch(login(credentials)).unwrap();
+    console.log(credentials);
+    await dispatch(login()).unwrap();
     navigate("/");
   };
 

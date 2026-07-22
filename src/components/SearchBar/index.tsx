@@ -43,6 +43,7 @@ import { LanguageOptions } from "../../constants/enums";
 
 import s from "./index.module.css";
 
+
 const DELAY = 250;
 
 export const SearchBar = () => {

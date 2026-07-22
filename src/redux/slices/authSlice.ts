@@ -4,7 +4,7 @@ import { createAsyncThunk } from "../store/hooks";
 
 import { isAxiosError } from "axios";
 
-import type { CredentialsType } from "../../components/LoginForm";
+// import type { CredentialsType } from "../../components/LoginForm";
 
 import { loadFromLocalStorage } from "../middleware/localStorageMiddlware";
 
@@ -24,11 +24,11 @@ const initialState: AuthState = {
 
 export const login = createAsyncThunk(
   "auth/login",
-  async (credentials: CredentialsType, { extra, rejectWithValue }) => {
+  async (_, { extra, rejectWithValue }) => {
     const { requestAuth } = extra;
 
     try {
-      const response = await requestAuth.login(credentials);
+      const response = await requestAuth.login();
 
       const { token } = response.data;
 
